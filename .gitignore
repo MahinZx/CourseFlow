@@ -1,0 +1,31 @@
+# Local editor and operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Local dependencies and test output
+node_modules/
+__pycache__/
+*.py[cod]
+.coverage
+coverage/
+playwright-report/
+test-results/
+tests/*.png
+*.log
+
+# Local credentials, exports, and packaged builds
+.env
+.env.*
+*.pem
+*.key
+*.crx
+*.zip
+*.ics
+backups/
+exports/
+
+# CourseFlow backups exported from Settings
+CourseFlow-backup-*.json

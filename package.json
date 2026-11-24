@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "courseflow",
+  "version": "1.4.4",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "CourseFlow",
+  "short_name": "CourseFlow",
+  "description": "Private Moodle, Mano exams, Mano class timetables, personal coursework and opt-in deadline reminders.",
+  "version": "1.4.4",
+  "permissions": [
+    "storage",
+    "scripting",
+    "alarms"
+  ],
+  "optional_permissions": [
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://moodle.vilniustech.lt/*",
+    "https://mano.vilniustech.lt/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open CourseFlow",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mano.vilniustech.lt/timetable/*"
+      ],
+      "js": [
+        "mano-observer.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
